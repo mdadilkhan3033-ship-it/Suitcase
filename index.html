@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxeCarry — Premium Travel Suitcases</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 10%;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(14, 14, 14, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #e0c080;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #aaa;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e0c080;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1606813902787-42eeb44a0b20?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      color: #e0c080;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      padding: 12px 35px;
+      background: #e0c080;
+      color: #111;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      background: #f5d98b;
+    }
+
+    .section {
+      padding: 100px 10%;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #e0c080;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #aaa;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-card h4 {
+      margin: 15px;
+      color: #e0c080;
+    }
+
+    .product-card p {
+      margin: 0 15px 20px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #111;
+      padding: 40px 10%;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LuxeCarry</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h2>Travel in Luxury</h2>
+      <p>Experience world-class craftsmanship with suitcases built for elegance, durability, and timeless style.</p>
+      <button class="cta-btn" onclick="scrollToSection('collection')">Explore Collection</button>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h3>Crafted for the Modern Traveler</h3>
+    <p>Our premium suitcase line blends high-end design with practical innovation. Every piece is meticulously engineered to ensure your journeys are seamless and stylish.</p>
+  </section>
+
+  <section class="section" id="collection">
+    <h3>The Luxe Collection</h3>
+    <div class="products">
+      <div class="product-card fade-in">
+        <img src="https://images.unsplash.com/photo-1582459011021-7a0b38d3cb32?auto=format&fit=crop&w=800&q=80" alt="Suitcase 1">
+        <h4>Carbon Elite</h4>
+        <p>Lightweight carbon fiber shell with smart tracking and silent wheels.</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="https://images.unsplash.com/photo-1601900249278-cfbb5b3a26c1?auto=format&fit=crop&w=800&q=80" alt="Suitcase 2">
+        <h4>Executive Pro</h4>
+        <p>Premium leather accents, TSA-approved locks, and expandable design.</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="https://images.unsplash.com/photo-1611162617211-7c3f0b1c3d4d?auto=format&fit=crop&w=800&q=80" alt="Suitcase 3">
+        <h4>Jetsetter X</h4>
+        <p>Luxury aluminum finish with interior compression system and USB-C charging.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Get in Touch</h3>
+    <p>Have questions or partnership ideas? Reach out and experience personalized assistance.</p>
+    <button class="cta-btn" onclick="window.location.href='mailto:contact@luxecarry.com'">Contact Us</button>
+  </section>
+
+  <footer>
+    © 2025 LuxeCarry. All rights reserved.
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+          entry.target.classList.add('visible');
+          entry.target.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
